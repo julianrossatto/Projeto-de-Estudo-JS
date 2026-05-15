@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        body {
+            background-color: Rgb(52, 168, 235);
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        h1{
+            color: #FFD166;
+        }
+
+        h2{
+            color: white
+        }
+
+       .lista{
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            list-style: none;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .item{
+            color: #333;
+            background-color: #f4f4f4;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-left: 5px solid #34A8EB;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .item:hover{
+            background-color: #dff4ff;
+            transform: scale(1.02);
+        }
+
+        .inicio{
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+
+
+
+
+
+    </style>
+    <script>
+        function questionario() {
+        alert("Vamos conhecver a base do Javascript!")
+        var decisao = confirm("Está pronto para aprender?");
+        const pais= `Brasil`;
+        var teste = null;
+        let teste2
+
+        if(decisao){
+            let nome = prompt(`Qual é o seu nome?`).toUpperCase();
+
+            let idade = Number.parseInt(prompt(`Qual é a sua idade?`));
+
+            let curso = prompt(`Qual é o seu curso?`);
+            
+            let salario = prompt(`Qual é o seu salário?`);     
+            
+            let nota = Number(prompt(`Qual é a maior nota que tirou no curso até agora?`));
+
+            document.writeln(`<h2 class="inicio">Seja bem vindo, ` + nome + `!</h2>`);
+            document.write(`<ul class="lista">`);
+                document.writeln(`<li class="item">Você tem ` + idade + ` anos.</li>`);
+                document.writeln(`<li class="item">Curso escolhido: ${curso.toLowerCase()}</li>`);
+                document.writeln(`<li class="item">Você tem `+ nome.length + ` caracteres no seu nome.</li>`);
+                document.writeln(`<li class="item">Seu país é ` + pais + `.</li>`);
+                document.writeln(`<li class="item">Seu salário é de: `+Number.parseFloat(salario).toFixed(2)+`.</li>`);
+                document.write(`</ul>`);
+
+                console.log(typeof nome);
+                console.log(typeof decisao);
+                console.log(typeof idade);
+                console.log(typeof curso);
+                console.log(typeof teste);
+                console.log(typeof teste2); 
+        }else{
+            alert("Tudo bem, volte quando estiver pronto!")
+            document.writeln(`<h2>Sistema encerrado.. recarregue a página.</h2>`);
+            alert(decisao)
+            alert(nome)
+        }
+    }
+</script>
+</head>
+
+
+<body>
+    <h1>Sistema de Questionário</h1>
+    <button onclick="questionario()">Iniciar Sistema</button>    
+</body>
+</html>
