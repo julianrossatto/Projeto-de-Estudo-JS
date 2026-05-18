@@ -83,4 +83,14 @@ function calcularBanco() {
     R$ ${jurosCompstos.toFixed(2)} <br>
 
     `
+
+    /*if(teste){
+        //executa um bloco de codigo
+    }else{
+        //executa outro
+    }
+    */
+   //teste ? 
+
+
 }
